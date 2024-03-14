@@ -1,0 +1,171 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Daftar Riwayat Order GoFood",
+    "description": "Api ini untuk mengelola dan mengakses layanan data order pada aplikasi GoFood",
+    "version": "1.0",
+    "contact": {
+      "name": "Kelompok 11 API-MIC",
+      "url": "http://localhost/restful_crud/restapi.php",
+      "email": "annastasya19aqila@gmail.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost/restful_crud/restapi.php"
+    }
+  ],
+  "paths": {
+    "/product": {
+      "get": {
+        "summary": "Get all product",
+        "responses": {
+          "200": {
+            "description": "Sukses",
+            "content": {
+              "application/json": {
+                "example": {
+                  "products": [
+                    {
+                      "id": 320,
+                      "username": "alyciasng",
+                      "nama_barang": "gudeg yu djum",
+                      "jumlah": 3,
+                      "harga": 54000
+                    },
+                    {
+                      "id": 321,
+                      "username": "annastsyql",
+                      "nama_barang": "nasi ayam bu oki",
+                      "jumlah": 5,
+                      "harga": 37000
+                    },
+                    {
+                      "id": 322,
+                      "username": "aqila",
+                      "nama_barang": "seafood artomoro pak kumis",
+                      "jumlah": 1,
+                      "harga": 97000
+                    },
+                    {
+                      "id": 323,
+                      "username": "yosephine",
+                      "nama_barang": "sanuk thai boat noodle",
+                      "jumlah": 11,
+                      "harga": 130000
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Add a new product",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "nama_barang": {
+                    "type": "string"
+                  },
+                  "jumlah": {
+                    "type": "integer"
+                  },
+                  "harga": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "berhasil"
+          },
+          "400": {
+            "description": "gagal"
+          }
+        }
+      }
+    },
+    "/product/{id_product}": {
+      "put": {
+        "summary": "Update product by ID",
+        "parameters": [
+          {
+            "name": "id_product",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "ID of the product to update"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string"
+                  },
+                  "nama_barang": {
+                    "type": "string"
+                  },
+                  "jumlah": {
+                    "type": "integer"
+                  },
+                  "harga": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Product updated successfully"
+          },
+          "404": {
+            "description": "Product not found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete product by ID",
+        "parameters": [
+          {
+            "name": "id_product",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "ID of the product to delete"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Product deleted successfully"
+          },
+          "404": {
+            "description": "Product not found"
+          }
+        }
+      }
+    }
+  }
+}
