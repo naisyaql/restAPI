@@ -9,9 +9,6 @@ Disusun oleh:
    
 2. Annastasya Aqila Chandrawati(109)
    
-3. Danu Teguh Heri Prasetyo (22091397100)
-
-
 Dosen Pengampu:
 
 Andi Iwan Nurhidayat, S. Kom., M. T.
