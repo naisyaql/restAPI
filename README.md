@@ -5,9 +5,9 @@ TUGAS MATA KULIAH PEMROGRAMAN API
 
 Disusun oleh:
 
-1. Alycia Yosephine Br Sinaga (080)
+1. Alycia Y Br Sinaga (080)
    
-2. Annastasya Aqila Chandrawati(109)
+2. Annastasya Aqila C(109)
    
 Dosen Pengampu:
 
